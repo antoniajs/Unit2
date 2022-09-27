@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Unit 2</string>
+    <string name="item_name">Item Name</string>
+    <string name="url_name">Ex: https://example.example/my-item-url</string>
+    <string name="price">Ex: 5.99</string>
+    <string name="button_text">Submit</string>
+</resources>
