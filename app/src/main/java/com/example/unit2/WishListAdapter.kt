@@ -1,20 +1,21 @@
 package com.example.unit2
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class WishListAdapter(private val context: Context, private val items: MutableList<WishList>) : RecyclerView.Adapter<WishListAdapter.ViewHolder>() {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val itemname = itemView.findViewById<TextView>(R.id.item_name)
-        private val itemprice = itemView.findViewById<TextView>(R.id.item_price)
-        private val itemurl = itemView.findViewById<TextView>(R.id.item_url)
+        private val itemname = itemView.findViewById<TextView>(R.id.displayedName)
+        private val itemprice = itemView.findViewById<TextView>(R.id.displayedPrice)
+        private val itemurl = itemView.findViewById<TextView>(R.id.displayedUrl)
 
         fun bind(WishList: WishList) {
+            Log.i("Bind Check", "Entered bind")
             itemname.text = WishList.name
             itemprice.text = WishList.price
             itemurl.text = WishList.url
